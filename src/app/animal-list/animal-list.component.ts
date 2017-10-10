@@ -44,6 +44,17 @@ export class AnimalListComponent implements OnInit {
 		return animal.datumRodjenja;
 	}
 
+	remove(someAnimal){
+		let animal = this.checkIndexOfAnimals(someAnimal);
+		this.animals.splice(animal, 1);
+	}
+
+	checkIndexOfAnimals(animal){
+		let index = this.animals.indexOf(animal);
+		console.log(index);
+			return index;
+	}
+
 
 	
 

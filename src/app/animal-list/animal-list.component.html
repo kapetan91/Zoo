@@ -9,6 +9,6 @@
 		<td> {{ animal.vrsta }} </td>
 		<td> {{ animal.ime }} </td>
 		<td> {{ dateOfBirth(animal) }} </td>
-		<td><button>remove</button> </td>
+		<td><button (click)="remove(animal)">remove</button> </td>
 </tr>
 </table>
