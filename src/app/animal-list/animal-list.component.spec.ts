@@ -23,3 +23,12 @@ describe('AnimalListComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+export class Animal{
+  newAnimal:Object = {
+    name:string;
+    species:string;
+    dateOfBirth:string;
+  };
+
+}

@@ -6,9 +6,16 @@
 		<th></th>
 	</tr>
 	<tr *ngFor="let animal of animals">
-		<td> {{ animal.vrsta }} </td>
-		<td> {{ animal.ime }} </td>
-		<td> {{ dateOfBirth(animal) }} </td>
+		<td> {{ animal.name }} </td>
+		<td> {{ animal.species }} </td>
+		<td> {{ birth(animal) }} </td>
 		<td><button (click)="remove(animal)">remove</button> </td>
 </tr>
 </table>
+<!-- 
+<form>
+<input name = "name" [(ngModel)] = "nameAnimal.name">
+<input name = "species" [(ngModel)] = "nameAnimal.species">
+<input name = "dateOfBirth" [(ngModel)] = "nameAnimal.dateOfBirth">
+<button (click)="addAnimal()">Add new animal</button>
+</form> -->

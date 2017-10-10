@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Animal } from  './animal'
 @Component({
   selector: 'app-animal-list',
   templateUrl: './animal-list.component.html',
@@ -7,41 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimalListComponent implements OnInit {
 
-	animals:Array<Object> = [
-	{
-		vrsta: 'Svinja',
-		datumRodjenja: '20.05.2017',
-		ime: 'Lepi'
-	},
-	{
-		vrsta: 'Koza',
-		datumRodjenja: '20.05.2017',
-		ime: 'Margaret'
-	},
-	{
-		vrsta: 'Krava',
-		datumRodjenja: '20.05.2017',
-		ime: 'Jovanka'
-	},
-	{
-		vrsta: 'Ovca',
-		datumRodjenja: '20.05.2017',
-		ime: 'Mila'
-	},
-	{
-		vrsta: 'Kokoska',
-		ime: 'Koka',
-		datumRodjenja: ''
+	animals:Array<Animal> = [
 
-	},
-	];
+	new Animal('Garfild', 'cat', '20.05.2015'),
+	new Animal('Garfild', 'cat', '20.05.2015'),
+	new Animal('Garfild', 'cat', '20.05.2015'),
+	new Animal('Garfild', 'cat', '20.05.2015')
 
-	dateOfBirth(animal){
+]
 
-		if(!animal.datumRodjenja.length){
+	// newAnimal:Animal = new Animal('', '', '')
+	
+
+	// addAnimal(){
+	// 	this.animallist.push(this.newAnimal)
+	// 	this.newAnimal = new Animal ('', '', '')
+	// }
+
+	birth(animal){
+
+		if(!animal.dateOfBirth.length){
 			return 'Nepoznat';
 		}
-		return animal.datumRodjenja;
+		return animal.dateOfBirth;
 	}
 
 	remove(someAnimal){
@@ -51,7 +39,6 @@ export class AnimalListComponent implements OnInit {
 
 	checkIndexOfAnimals(animal){
 		let index = this.animals.indexOf(animal);
-		console.log(index);
 			return index;
 	}
 
