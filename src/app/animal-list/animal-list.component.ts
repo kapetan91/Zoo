@@ -17,14 +17,13 @@ export class AnimalListComponent implements OnInit {
 
 
 ]
-
-	// newAnimal:Animal = new Animal('', '', '')
+	newAnimal:Animal = new Animal('', '', '')
 	
 
-	// addAnimal(){
-	// 	this.animallist.push(this.newAnimal)
-	// 	this.newAnimal = new Animal ('', '', '')
-	// }
+	addAnimal(){
+		this.animals.push(this.newAnimal)
+		this.newAnimal = new Animal ('', '', '')
+	}
 
 	birth(animal){
 

@@ -1,3 +1,10 @@
+<form>
+<input type = "text" name = "name" [(ngModel)] = "newAnimal.name">
+<input type = "text" name = "species" [(ngModel)] = "newAnimal.species">
+<input type = "text" name = "dateOfBirth" [(ngModel)] = "newAnimal.dateOfBirth">
+<button (click)="addAnimal()">Add new animal</button>
+</form>
+
 <table border="1">
 	<tr>
 		<th>Ime</th>
@@ -13,10 +20,3 @@
 		<td><button (click)="moveToTop(animal)">move to top</button> </td>
 </tr>
 </table>
-<!-- 
-<form>
-<input name = "name" [(ngModel)] = "nameAnimal.name">
-<input name = "species" [(ngModel)] = "nameAnimal.species">
-<input name = "dateOfBirth" [(ngModel)] = "nameAnimal.dateOfBirth">
-<button (click)="addAnimal()">Add new animal</button>
-</form> -->
