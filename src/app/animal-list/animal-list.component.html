@@ -1,12 +1,14 @@
-<table>
+<table border="1">
 	<tr>
 		<th>Vrsta</th>
 		<th>Ime</th>
 		<th>Datum rodjenja</th>
+		<th></th>
 	</tr>
 	<tr *ngFor="let animal of animals">
 		<td> {{ animal.vrsta }} </td>
 		<td> {{ animal.ime }} </td>
-		<td> {{ animal.datumRodjenja }} </td>
+		<td> {{ dateOfBirth(animal) }} </td>
+		<td><button>remove</button> </td>
 </tr>
 </table>

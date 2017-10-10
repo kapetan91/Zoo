@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./animal-list.component.css']
 })
 export class AnimalListComponent implements OnInit {
+
 	animals:Array<Object> = [
 	{
 		vrsta: 'Svinja',
@@ -29,10 +30,20 @@ export class AnimalListComponent implements OnInit {
 	},
 	{
 		vrsta: 'Kokoska',
-		ime: 'Koka'
+		ime: 'Koka',
+		datumRodjenja: ''
+
 	},
 	];
-		 
+
+	dateOfBirth(animal){
+
+		if(!animal.datumRodjenja.length){
+			return 'Nepoznat';
+		}
+		return animal.datumRodjenja;
+	}
+
 
 	
 
