@@ -8,29 +8,28 @@ import { Component, OnInit } from '@angular/core';
 export class AnimalListComponent implements OnInit {
 	animals:Array<Object> = [
 	{
-		name: 'Svinja',
-		tezina: '120kg',
-		datumRodjenja: '20.08.2016'
+		vrsta: 'Svinja',
+		datumRodjenja: '20.05.2017',
+		ime: 'Lepi'
 	},
 	{
-		name: 'Koza',
-		tezina: '40',
-		datumRodjenja: '20.04.2016'
+		vrsta: 'Koza',
+		datumRodjenja: '20.05.2017',
+		ime: 'Margaret'
 	},
 	{
-		name: 'Krava',
-		tezina: '500kg',
-		datumRodjenja: '20.05.2016'
+		vrsta: 'Krava',
+		datumRodjenja: '20.05.2017',
+		ime: 'Jovanka'
 	},
 	{
-		name: 'Ovca',
-		tezina: '60kg',
-		datumRodjenja: '20.01.2016'
+		vrsta: 'Ovca',
+		datumRodjenja: '20.05.2017',
+		ime: 'Mila'
 	},
 	{
-		name: 'Kokoska',
-		tezina: '3kg',
-		datumRodjenja: '20.11.2016'
+		vrsta: 'Kokoska',
+		ime: 'Koka'
 	},
 	];
 		 
