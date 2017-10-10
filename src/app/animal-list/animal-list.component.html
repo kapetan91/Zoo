@@ -2,6 +2,7 @@
 <input type = "text" name = "name" [(ngModel)] = "newAnimal.name">
 <input type = "text" name = "species" [(ngModel)] = "newAnimal.species">
 <input type = "text" name = "dateOfBirth" [(ngModel)] = "newAnimal.dateOfBirth">
+<input type = "text" name = "sector" [(ngModel)] = "newAnimal.sector.name">
 <button (click)="addAnimal()">Add new animal</button>
 </form>
 
@@ -10,12 +11,14 @@
 		<th>Ime</th>
 		<th>Vrsta</th>
 		<th>Datum rodjenja</th>
+		<th>Sektor</th>
 		<th></th>
 	</tr>
 	<tr *ngFor="let animal of animals">
 		<td> {{ animal.name }} </td>
 		<td> {{ animal.species }} </td>
 		<td> {{ birth(animal) }} </td>
+		<td> {{ animal.sector.name }} </td>
 		<td><button (click)="remove(animal)">remove</button> </td>
 		<td><button (click)="moveToTop(animal)">move to top</button> </td>
 </tr>
