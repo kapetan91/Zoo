@@ -1,7 +1,7 @@
 <table border="1">
 	<tr>
-		<th>Vrsta</th>
 		<th>Ime</th>
+		<th>Vrsta</th>
 		<th>Datum rodjenja</th>
 		<th></th>
 	</tr>
@@ -10,6 +10,7 @@
 		<td> {{ animal.species }} </td>
 		<td> {{ birth(animal) }} </td>
 		<td><button (click)="remove(animal)">remove</button> </td>
+		<td><button (click)="moveToTop(animal)">move to top</button> </td>
 </tr>
 </table>
 <!-- 

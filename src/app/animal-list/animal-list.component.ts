@@ -10,9 +10,11 @@ export class AnimalListComponent implements OnInit {
 	animals:Array<Animal> = [
 
 	new Animal('Garfild', 'cat', '20.05.2015'),
-	new Animal('Garfild', 'cat', '20.05.2015'),
-	new Animal('Garfild', 'cat', '20.05.2015'),
-	new Animal('Garfild', 'cat', '20.05.2015')
+	new Animal('Zuco', 'dog', '20.05.2017'),
+	new Animal('Gavro', 'pig', '15.05.2017'),
+	new Animal('Milena', 'cow', '20.05.2015'),
+	new Animal('Beli', 'cat', '')
+
 
 ]
 
@@ -42,7 +44,10 @@ export class AnimalListComponent implements OnInit {
 			return index;
 	}
 
-
+	moveToTop(animal){
+		this.remove(animal);
+		this.animals.unshift(animal)
+	}
 	
 
   constructor() { }
